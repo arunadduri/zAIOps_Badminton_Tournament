@@ -449,16 +449,17 @@ function displayFilteredRegistrations() {
         'mixedDoubles': "Mixed Doubles"
     };
     
-    // Filter registrations for selected category only
-    let filteredData = allRegistrationsData.filter(reg => reg.category === currentRegistrationTab);
+    // Filter registrations for selected category only (trim whitespace to handle data inconsistencies)
+    let filteredData = allRegistrationsData.filter(reg => reg.category?.trim() === currentRegistrationTab);
     
-    // Group by category
+    // Group by category (trim whitespace to handle data inconsistencies)
     const groupedByCategory = {};
     filteredData.forEach(reg => {
-        if (!groupedByCategory[reg.category]) {
-            groupedByCategory[reg.category] = [];
+        const categoryKey = reg.category?.trim();
+        if (!groupedByCategory[categoryKey]) {
+            groupedByCategory[categoryKey] = [];
         }
-        groupedByCategory[reg.category].push(reg);
+        groupedByCategory[categoryKey].push(reg);
     });
     
     container.innerHTML = '';
@@ -486,8 +487,6 @@ function displayFilteredRegistrations() {
                     <span class="player-count-badge">${count} ${teamLabel}</span>
                 </div>
                 <div class="header-stats-compact">
-                    <span class="stat-text"><strong>${count}</strong> ${teamLabel}</span>
-                    <span class="stat-separator">•</span>
                     <span class="stat-text">Last entry <strong>${lastEntry}</strong></span>
                 </div>
             </div>
