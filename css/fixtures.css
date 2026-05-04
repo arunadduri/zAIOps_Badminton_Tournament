@@ -444,36 +444,45 @@
 
 .group-teams {
     margin-bottom: 20px;
-    padding: 12px 0;
-    font-size: 0.9rem;
-    color: rgba(229, 231, 235, 0.6);
-    font-weight: 400;
-    line-height: 1.6;
 }
 
 .group-teams-label {
+    display: block;
     color: rgba(229, 231, 235, 0.5);
     font-weight: 500;
-    margin-right: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.group-teams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 
 .group-team {
-    display: inline;
-    color: rgba(229, 231, 235, 0.7);
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: rgba(229, 231, 235, 0.65);
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.group-team::before {
-    content: '●';
-    color: var(--primary-cyan);
-    margin-right: 6px;
-    font-size: 0.7rem;
+.group-team:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(34, 211, 238, 0.2);
 }
 
-.group-team:not(:last-child)::after {
-    content: ' • ';
-    color: rgba(229, 231, 235, 0.4);
-    margin: 0 4px;
+@media (max-width: 768px) {
+    .group-teams-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Responsive adjustments */
