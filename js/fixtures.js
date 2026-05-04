@@ -300,10 +300,12 @@ function renderSinglesFixtures(data) {
     
     let html = `
         <div class="category-header-enhanced">
-            <h2 class="category-title-enhanced">${data.title}</h2>
-            <div class="category-badge-enhanced">${data.players} Players</div>
+            <div class="category-header-left">
+                <h2 class="category-title-enhanced">${data.title}</h2>
+                <div class="category-badge-enhanced">${data.players} Players</div>
+            </div>
+            <div class="format-path-inline">${roundNames}</div>
         </div>
-        <div class="format-path">${roundNames}</div>
     `;
     
     data.rounds.forEach(round => {
@@ -355,10 +357,12 @@ function renderDoublesFixtures(data) {
     
     let html = `
         <div class="category-header-enhanced">
-            <h2 class="category-title-enhanced">${data.title}</h2>
-            <div class="category-badge-enhanced">${data.teams} Teams</div>
+            <div class="category-header-left">
+                <h2 class="category-title-enhanced">${data.title}</h2>
+                <div class="category-badge-enhanced">${data.teams} Teams</div>
+            </div>
+            <div class="format-path-inline">${roundNames}</div>
         </div>
-        <div class="format-path">${roundNames}</div>
     `;
     
     data.rounds.forEach(round => {
@@ -410,10 +414,12 @@ function renderDoublesFixtures(data) {
 function renderWomensDoublesFixtures(data) {
     let html = `
         <div class="category-header-enhanced">
-            <h2 class="category-title-enhanced">${data.title}</h2>
-            <div class="category-badge-enhanced">${data.teams} Teams</div>
+            <div class="category-header-left">
+                <h2 class="category-title-enhanced">${data.title}</h2>
+                <div class="category-badge-enhanced">${data.teams} Teams</div>
+            </div>
+            <div class="format-path-inline">${data.format}</div>
         </div>
-        <div class="format-path">${data.format}</div>
     `;
     
     data.groups.forEach(group => {
