@@ -415,7 +415,7 @@ function renderWomensDoublesFixtures(data) {
             <div class="round-section">
                 <h3 class="round-title">${group.name} - Round Robin <span class="match-count">${group.matches.length} matches</span></h3>
                 <div class="group-teams">
-                    ${group.teams.map(team => `<div class="group-team">${team.replace(' / ', ' • ')}</div>`).join('')}
+                    <span class="group-teams-label">👥 Teams:</span>${group.teams.map(team => `<span class="group-team">${team.replace(' / ', ' • ')}</span>`).join('')}
                 </div>
                 <div class="matches-grid">
         `;

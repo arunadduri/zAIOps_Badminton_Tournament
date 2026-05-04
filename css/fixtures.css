@@ -443,23 +443,37 @@
 }
 
 .group-teams {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
     margin-bottom: 20px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 12px;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.6);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.group-teams-label {
+    color: rgba(229, 231, 235, 0.5);
+    font-weight: 500;
+    margin-right: 8px;
 }
 
 .group-team {
-    padding: 8px 16px;
-    background: white;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    display: inline;
+    color: rgba(229, 231, 235, 0.7);
+    font-weight: 500;
+}
+
+.group-team::before {
+    content: '●';
     color: var(--primary-cyan);
-    border: 1px solid #e0e0e0;
-    font-weight: 600;
+    margin-right: 6px;
+    font-size: 0.7rem;
+}
+
+.group-team:not(:last-child)::after {
+    content: ' • ';
+    color: rgba(229, 231, 235, 0.4);
+    margin: 0 4px;
 }
 
 /* Responsive adjustments */
