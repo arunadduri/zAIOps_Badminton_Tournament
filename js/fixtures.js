@@ -314,7 +314,6 @@ function renderSinglesFixtures(data) {
         
         round.matches.forEach((match, index) => {
             const court = (index % 3) + 1;
-            const status = 'upcoming';
             const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
             
             html += `
@@ -334,9 +333,6 @@ function renderSinglesFixtures(data) {
                         <div class="player-row">
                             <span class="player-name">${match.player2}</span>
                         </div>
-                    </div>
-                    <div class="match-status">
-                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -372,7 +368,6 @@ function renderDoublesFixtures(data) {
         
         round.matches.forEach((match, index) => {
             const court = (index % 3) + 1;
-            const status = 'upcoming';
             const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
             
             html += `
@@ -392,9 +387,6 @@ function renderDoublesFixtures(data) {
                         <div class="player-row">
                             <span class="player-name">${match.team2}</span>
                         </div>
-                    </div>
-                    <div class="match-status">
-                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -433,7 +425,6 @@ function renderWomensDoublesFixtures(data) {
         
         group.matches.forEach((match, index) => {
             const court = (index % 3) + 1;
-            const status = 'upcoming';
             const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
             
             html += `
@@ -453,9 +444,6 @@ function renderWomensDoublesFixtures(data) {
                         <div class="player-row">
                             <span class="player-name">${match.team2}</span>
                         </div>
-                    </div>
-                    <div class="match-status">
-                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -487,9 +475,6 @@ function renderWomensDoublesFixtures(data) {
                         <div class="player-row">
                             <span class="player-name">🏆 ${data.final.team2}</span>
                         </div>
-                    </div>
-                    <div class="match-status">
-                        <span class="status-badge status-upcoming">Upcoming</span>
                     </div>
                 </div>
             </div>
