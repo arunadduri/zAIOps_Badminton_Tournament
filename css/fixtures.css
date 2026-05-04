@@ -225,12 +225,16 @@
 
 .round-title {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #22D3EE;
     margin-bottom: 20px;
     padding: 15px 20px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(56, 189, 248, 0.05));
     border-radius: 12px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid #22D3EE;
+    border: 1px solid rgba(34, 211, 238, 0.15);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -254,19 +258,40 @@
 }
 
 .match-card {
-    background: #111827;
+    background: linear-gradient(135deg, #121A2B 0%, #1A2332 100%);
     border-radius: 12px;
     padding: 20px 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(0, 229, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
-    border: 1px solid #1F2937;
+    border-left: 3px solid rgba(34, 211, 238, 0.5);
     position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(56, 189, 248, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .match-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(34, 211, 238, 0.1);
-    border-color: rgba(34, 211, 238, 0.3);
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(34, 211, 238, 0.4),
+        0 0 20px rgba(34, 211, 238, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(34, 211, 238, 0.8);
 }
 
 .match-card.final-match {
