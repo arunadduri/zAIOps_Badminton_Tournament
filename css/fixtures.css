@@ -118,8 +118,8 @@
     padding: 12px;
     background: #f8f9fa;
     border-radius: 8px;
-    font-weight: 500;
-    color: #333;
+    font-weight: 600;
+    color: var(--primary-cyan);
     transition: all 0.3s ease;
     border-left: 4px solid transparent;
 }
@@ -341,8 +341,8 @@
 
 .player-name {
     flex: 1;
-    font-weight: 500;
-    color: #333;
+    font-weight: 600;
+    color: var(--primary-cyan);
     font-size: 0.95rem;
 }
 
@@ -421,9 +421,9 @@
     background: white;
     border-radius: 8px;
     font-size: 0.9rem;
-    color: #333;
+    color: var(--primary-cyan);
     border: 1px solid #e0e0e0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Responsive adjustments */

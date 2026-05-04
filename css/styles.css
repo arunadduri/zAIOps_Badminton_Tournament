@@ -2276,7 +2276,7 @@ html {
 
 .player-name {
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--primary-cyan);
 }
 
 /* Email Column */
