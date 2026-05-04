@@ -2617,7 +2617,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: var(--primary-cyan);
+    color: rgba(255, 255, 255, 0.95);
     margin: 0;
 }
 
@@ -2665,7 +2665,7 @@ html {
     align-items: flex-start;
     gap: 12px;
     padding: 10px 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 15px;
     line-height: 1.6;
 }
@@ -2694,25 +2694,85 @@ html {
     align-items: center;
     gap: 12px;
     padding: 15px 20px;
-    background: rgba(255, 107, 53, 0.1);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.08));
     border-radius: 12px;
-    border-left: 4px solid var(--primary-orange);
+    border-left: 4px solid rgba(139, 92, 246, 0.6);
     transition: all 0.3s ease;
 }
 
 .key-rule-item:hover {
-    background: rgba(255, 107, 53, 0.15);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(59, 130, 246, 0.12));
     transform: translateX(5px);
+    border-left-color: rgba(139, 92, 246, 0.8);
 }
 
 .key-icon {
     font-size: 20px;
-    filter: drop-shadow(0 2px 6px rgba(255, 107, 53, 0.4));
+    filter: drop-shadow(0 2px 6px rgba(139, 92, 246, 0.4));
 }
 
 .key-rule-item strong {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 15px;
+}
+
+/* Format Options Styling */
+.format-options {
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.08), rgba(59, 130, 246, 0.08));
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 200, 255, 0.1);
+}
+
+.format-options-title {
+    margin: 0 0 12px 0;
+    color: var(--primary-cyan);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.format-options-grid {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.format-option-pill {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.format-option-pill:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(0, 200, 255, 0.3);
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.15);
+}
+
+.format-option-pill strong {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+.format-option-pill span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.format-default-note {
+    margin: 12px 0 0 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.format-default-note strong {
+    color: rgba(255, 193, 7, 0.9);
+    font-weight: 600;
 }
 
 /* Categories Grid */
