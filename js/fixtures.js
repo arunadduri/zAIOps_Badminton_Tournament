@@ -295,11 +295,15 @@ function loadFixtures(category) {
 
 // Render singles fixtures
 function renderSinglesFixtures(data) {
+    // Generate format path based on rounds
+    const roundNames = data.rounds.map(r => r.name).join(' → ');
+    
     let html = `
         <div class="category-header-enhanced">
             <h2 class="category-title-enhanced">${data.title}</h2>
             <div class="category-badge-enhanced">${data.players} Players</div>
         </div>
+        <div class="format-path">${roundNames}</div>
     `;
     
     data.rounds.forEach(round => {
@@ -346,11 +350,15 @@ function renderSinglesFixtures(data) {
 
 // Render doubles fixtures
 function renderDoublesFixtures(data) {
+    // Generate format path based on rounds
+    const roundNames = data.rounds.map(r => r.name).join(' → ');
+    
     let html = `
         <div class="category-header-enhanced">
             <h2 class="category-title-enhanced">${data.title}</h2>
             <div class="category-badge-enhanced">${data.teams} Teams</div>
         </div>
+        <div class="format-path">${roundNames}</div>
     `;
     
     data.rounds.forEach(round => {
@@ -404,10 +412,8 @@ function renderWomensDoublesFixtures(data) {
         <div class="category-header-enhanced">
             <h2 class="category-title-enhanced">${data.title}</h2>
             <div class="category-badge-enhanced">${data.teams} Teams</div>
-            <div class="category-info-enhanced">
-                <span>${data.format}</span>
-            </div>
         </div>
+        <div class="format-path">${data.format}</div>
     `;
     
     data.groups.forEach(group => {

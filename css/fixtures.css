@@ -442,6 +442,20 @@
     font-size: 1rem;
 }
 
+/* Format Path */
+.format-path {
+    text-align: center;
+    padding: 12px 20px;
+    margin: -10px 0 25px 0;
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.6);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: rgba(34, 211, 238, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(34, 211, 238, 0.15);
+}
+
 .group-teams {
     margin-bottom: 20px;
 }
