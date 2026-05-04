@@ -336,7 +336,7 @@ function renderSinglesFixtures(data) {
                         </div>
                     </div>
                     <div class="match-status">
-                        <span class="status-badge status-${status}">🟡 Upcoming</span>
+                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -394,7 +394,7 @@ function renderDoublesFixtures(data) {
                         </div>
                     </div>
                     <div class="match-status">
-                        <span class="status-badge status-${status}">🟡 Upcoming</span>
+                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -455,7 +455,7 @@ function renderWomensDoublesFixtures(data) {
                         </div>
                     </div>
                     <div class="match-status">
-                        <span class="status-badge status-${status}">🟡 Upcoming</span>
+                        <span class="status-badge status-${status}">Upcoming</span>
                     </div>
                 </div>
             `;
@@ -489,7 +489,7 @@ function renderWomensDoublesFixtures(data) {
                         </div>
                     </div>
                     <div class="match-status">
-                        <span class="status-badge status-upcoming">🟡 Upcoming</span>
+                        <span class="status-badge status-upcoming">Upcoming</span>
                     </div>
                 </div>
             </div>
