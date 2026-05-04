@@ -228,14 +228,24 @@ const fixturesData = {
 };
 
 // Switch between fixture tabs
-function switchFixturesTab(category) {
+function switchFixturesTab(category, element) {
     // Remove active class from all tabs
     document.querySelectorAll('.registration-tab').forEach(tab => {
         tab.classList.remove('active');
     });
     
     // Add active class to clicked tab
-    event.target.closest('.registration-tab').classList.add('active');
+    if (element) {
+        element.classList.add('active');
+    } else {
+        // Fallback: find and activate the correct tab
+        const tabs = document.querySelectorAll('.registration-tab');
+        tabs.forEach(tab => {
+            if (tab.getAttribute('onclick').includes(category)) {
+                tab.classList.add('active');
+            }
+        });
+    }
     
     // Load fixtures for the selected category
     loadFixtures(category);
@@ -246,7 +256,14 @@ function loadFixtures(category) {
     const container = document.getElementById('fixturesContainer');
     const loading = document.getElementById('fixturesLoading');
     
-    loading.style.display = 'block';
+    if (!container) {
+        console.error('Fixtures container not found');
+        return;
+    }
+    
+    if (loading) {
+        loading.style.display = 'block';
+    }
     
     setTimeout(() => {
         let html = '';
@@ -270,7 +287,9 @@ function loadFixtures(category) {
         }
         
         container.innerHTML = html;
-        loading.style.display = 'none';
+        if (loading) {
+            loading.style.display = 'none';
+        }
     }, 300);
 }
 
