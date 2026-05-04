@@ -299,9 +299,6 @@ function renderSinglesFixtures(data) {
         <div class="category-header-enhanced">
             <h2 class="category-title-enhanced">${data.title}</h2>
             <div class="category-badge-enhanced">${data.players} Players</div>
-            <div class="category-info-enhanced">
-                <span>Last updated: 10 days ago</span>
-            </div>
         </div>
     `;
     
@@ -353,9 +350,6 @@ function renderDoublesFixtures(data) {
         <div class="category-header-enhanced">
             <h2 class="category-title-enhanced">${data.title}</h2>
             <div class="category-badge-enhanced">${data.teams} Teams</div>
-            <div class="category-info-enhanced">
-                <span>Last updated: 10 days ago</span>
-            </div>
         </div>
     `;
     
