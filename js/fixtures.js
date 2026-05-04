@@ -62,7 +62,7 @@ const fixturesData = {
         matches: 11,
         rounds: [
             {
-                name: "Round 2",
+                name: "Round 1",
                 matches: [
                     { id: 1, team1: "Kiran Kumar H N / Chandan N Bhat", team2: "Sathish kumar S / Bharathikannan" },
                     { id: 2, team1: "Shaikh Sufyan / Hariprasad", team2: "Dharunraj R / Akhil J" },
@@ -312,20 +312,31 @@ function renderSinglesFixtures(data) {
                 <div class="matches-grid">
         `;
         
-        round.matches.forEach(match => {
+        round.matches.forEach((match, index) => {
+            const court = (index % 3) + 1;
+            const status = 'upcoming';
+            const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
+            
             html += `
                 <div class="match-card">
-                    <div class="match-id">M${match.id}</div>
+                    <div class="match-header">
+                        <div class="match-id">M${match.id}</div>
+                        <div class="match-meta">
+                            <span class="match-court">Court ${court}</span>
+                            <span class="match-time">${time}</span>
+                        </div>
+                    </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-avatar">${match.player1.charAt(0)}</span>
                             <span class="player-name">${match.player1}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-avatar">${match.player2.charAt(0)}</span>
                             <span class="player-name">${match.player2}</span>
                         </div>
+                    </div>
+                    <div class="match-status">
+                        <span class="status-badge status-${status}">🟡 Upcoming</span>
                     </div>
                 </div>
             `;
@@ -359,20 +370,31 @@ function renderDoublesFixtures(data) {
                 <div class="matches-grid">
         `;
         
-        round.matches.forEach(match => {
+        round.matches.forEach((match, index) => {
+            const court = (index % 3) + 1;
+            const status = 'upcoming';
+            const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
+            
             html += `
                 <div class="match-card">
-                    <div class="match-id">M${match.id}</div>
+                    <div class="match-header">
+                        <div class="match-id">M${match.id}</div>
+                        <div class="match-meta">
+                            <span class="match-court">Court ${court}</span>
+                            <span class="match-time">${time}</span>
+                        </div>
+                    </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-avatar">👥</span>
                             <span class="player-name">${match.team1}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-avatar">👥</span>
                             <span class="player-name">${match.team2}</span>
                         </div>
+                    </div>
+                    <div class="match-status">
+                        <span class="status-badge status-${status}">🟡 Upcoming</span>
                     </div>
                 </div>
             `;
@@ -409,20 +431,31 @@ function renderWomensDoublesFixtures(data) {
                 <div class="matches-grid">
         `;
         
-        group.matches.forEach(match => {
+        group.matches.forEach((match, index) => {
+            const court = (index % 3) + 1;
+            const status = 'upcoming';
+            const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
+            
             html += `
                 <div class="match-card">
-                    <div class="match-id">M${match.id}</div>
+                    <div class="match-header">
+                        <div class="match-id">M${match.id}</div>
+                        <div class="match-meta">
+                            <span class="match-court">Court ${court}</span>
+                            <span class="match-time">${time}</span>
+                        </div>
+                    </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-avatar">👥</span>
                             <span class="player-name">${match.team1}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-avatar">👥</span>
                             <span class="player-name">${match.team2}</span>
                         </div>
+                    </div>
+                    <div class="match-status">
+                        <span class="status-badge status-${status}">🟡 Upcoming</span>
                     </div>
                 </div>
             `;
@@ -439,17 +472,24 @@ function renderWomensDoublesFixtures(data) {
             <h3 class="round-title">Final</h3>
             <div class="matches-grid">
                 <div class="match-card final-match">
-                    <div class="match-id">M${data.final.id}</div>
+                    <div class="match-header">
+                        <div class="match-id">M${data.final.id}</div>
+                        <div class="match-meta">
+                            <span class="match-court">Court 1</span>
+                            <span class="match-time">3:00 PM</span>
+                        </div>
+                    </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-avatar">🏆</span>
-                            <span class="player-name">${data.final.team1}</span>
+                            <span class="player-name">🏆 ${data.final.team1}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-avatar">🏆</span>
-                            <span class="player-name">${data.final.team2}</span>
+                            <span class="player-name">🏆 ${data.final.team2}</span>
                         </div>
+                    </div>
+                    <div class="match-status">
+                        <span class="status-badge status-upcoming">🟡 Upcoming</span>
                     </div>
                 </div>
             </div>
