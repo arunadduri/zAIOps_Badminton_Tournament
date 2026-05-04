@@ -20,7 +20,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Round of 16",
+                name: "Round 2",
                 matches: [
                     { id: 10, player1: "Kiran Kumar H N", player2: "Winner M1" },
                     { id: 11, player1: "Winner M2", player2: "Manas Manna" },
@@ -33,7 +33,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Quarter-Finals",
+                name: "Quarterfinals",
                 matches: [
                     { id: 18, player1: "Winner M10", player2: "Winner M11" },
                     { id: 19, player1: "Winner M12", player2: "Winner M13" },
@@ -42,7 +42,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Semi-Finals",
+                name: "Semifinals",
                 matches: [
                     { id: 22, player1: "Winner M18", player2: "Winner M19" },
                     { id: 23, player1: "Winner M20", player2: "Winner M21" }
@@ -62,7 +62,7 @@ const fixturesData = {
         matches: 11,
         rounds: [
             {
-                name: "Round of 16",
+                name: "Round 2",
                 matches: [
                     { id: 1, team1: "Kiran Kumar H N / Chandan N Bhat", team2: "Sathish kumar S / Bharathikannan" },
                     { id: 2, team1: "Shaikh Sufyan / Hariprasad", team2: "Dharunraj R / Akhil J" },
@@ -71,7 +71,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Quarter-Finals",
+                name: "Quarterfinals",
                 matches: [
                     { id: 5, team1: "Winner M1", team2: "Winner M2" },
                     { id: 6, team1: "Patan Amrulla Khan / Sandeep Ambekar", team2: "Sushant Kumar / Ravindra Rao" },
@@ -80,7 +80,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Semi-Finals",
+                name: "Semifinals",
                 matches: [
                     { id: 9, team1: "Winner M5", team2: "Winner M6" },
                     { id: 10, team1: "Winner M7", team2: "Winner M8" }
@@ -106,7 +106,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Round of 16",
+                name: "Round 2",
                 matches: [
                     { id: 2, player1: "Winner M1", player2: "Prathyusha Chaganti" },
                     { id: 3, player1: "Arya Raj", player2: "Manju Nair" },
@@ -119,7 +119,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Quarter-Finals",
+                name: "Quarterfinals",
                 matches: [
                     { id: 10, player1: "Winner M2", player2: "Winner M3" },
                     { id: 11, player1: "Winner M4", player2: "Winner M5" },
@@ -128,7 +128,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Semi-Finals",
+                name: "Semifinals",
                 matches: [
                     { id: 14, player1: "Winner M10", player2: "Winner M11" },
                     { id: 15, player1: "Winner M12", player2: "Winner M13" }
@@ -189,7 +189,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Round of 16",
+                name: "Round 2",
                 matches: [
                     { id: 2, team1: "Winner M1", team2: "Asmita Gharat / Shriram Rao" },
                     { id: 3, team1: "Chirag A / Bhavya Joshi", team2: "Chandan n bhat / Sahithi budem" },
@@ -202,7 +202,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Quarter-Finals",
+                name: "Quarterfinals",
                 matches: [
                     { id: 10, team1: "Winner M2", team2: "Winner M3" },
                     { id: 11, team1: "Winner M4", team2: "Winner M5" },
@@ -211,7 +211,7 @@ const fixturesData = {
                 ]
             },
             {
-                name: "Semi-Finals",
+                name: "Semifinals",
                 matches: [
                     { id: 14, team1: "Winner M10", team2: "Winner M11" },
                     { id: 15, team1: "Winner M12", team2: "Winner M13" }
