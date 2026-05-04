@@ -364,6 +364,9 @@ function renderDoublesFixtures(data) {
             const court = (index % 3) + 1;
             const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
             
+            const team1Display = match.team1.replace(' / ', ' • ');
+            const team2Display = match.team2.replace(' / ', ' • ');
+            
             html += `
                 <div class="match-card">
                     <div class="match-header">
@@ -375,11 +378,11 @@ function renderDoublesFixtures(data) {
                     </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-name">${match.team1}</span>
+                            <span class="player-name">${team1Display}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-name">${match.team2}</span>
+                            <span class="player-name">${team2Display}</span>
                         </div>
                     </div>
                 </div>
@@ -412,7 +415,7 @@ function renderWomensDoublesFixtures(data) {
             <div class="round-section">
                 <h3 class="round-title">${group.name} - Round Robin <span class="match-count">${group.matches.length} matches</span></h3>
                 <div class="group-teams">
-                    ${group.teams.map(team => `<div class="group-team">👥 ${team}</div>`).join('')}
+                    ${group.teams.map(team => `<div class="group-team">${team.replace(' / ', ' • ')}</div>`).join('')}
                 </div>
                 <div class="matches-grid">
         `;
@@ -420,6 +423,9 @@ function renderWomensDoublesFixtures(data) {
         group.matches.forEach((match, index) => {
             const court = (index % 3) + 1;
             const time = `${10 + Math.floor(index / 3)}:${(index % 2) * 30 || '00'} AM`;
+            
+            const team1Display = match.team1.replace(' / ', ' • ');
+            const team2Display = match.team2.replace(' / ', ' • ');
             
             html += `
                 <div class="match-card">
@@ -432,11 +438,11 @@ function renderWomensDoublesFixtures(data) {
                     </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-name">${match.team1}</span>
+                            <span class="player-name">${team1Display}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-name">${match.team2}</span>
+                            <span class="player-name">${team2Display}</span>
                         </div>
                     </div>
                 </div>
@@ -463,11 +469,11 @@ function renderWomensDoublesFixtures(data) {
                     </div>
                     <div class="match-players">
                         <div class="player-row">
-                            <span class="player-name">🏆 ${data.final.team1}</span>
+                            <span class="player-name">${data.final.team1}</span>
                         </div>
                         <div class="vs-divider">VS</div>
                         <div class="player-row">
-                            <span class="player-name">🏆 ${data.final.team2}</span>
+                            <span class="player-name">${data.final.team2}</span>
                         </div>
                     </div>
                 </div>

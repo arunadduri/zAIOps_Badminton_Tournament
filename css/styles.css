@@ -138,6 +138,8 @@
 :root {
     --primary-cyan: #22D3EE;
     --primary-blue: #38BDF8;
+    --primary-orange: #ff6b35;
+    --accent-orange: #ff8c42;
     --dark-bg: #0B1220;
     --card-bg: #111827;
     --card-elevated: #1F2937;
@@ -145,6 +147,7 @@
     --text-primary: #E5E7EB;
     --text-secondary: #9CA3AF;
     --text-muted: #6B7280;
+    --text-light: #ffffff;
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -640,7 +643,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 40px;
     line-height: 1.6;
     text-shadow:
