@@ -25,12 +25,12 @@
 | 11:20 AM | 1 | M7 | Men's Singles R1 | Dharunraj R vs Hariram K |
 | 11:20 AM | 2 | M8 | Men's Singles R1 | Sumit Gaurav vs VARUN PATTNAIK |
 | 11:20 AM | 6 | M9 | Men's Singles R1 | Sandeep Ambekar vs Devendar Rao |
-| 11:20 AM | 3 | M12 | Men's Doubles R16 | Shaikh Sufyan / Hariprasad vs Dharunraj R / Akhil J |
-| 11:20 AM | 4 | M13 | Men's Doubles R16 | Manas Manna / Chirag A vs Amit Kumar / Moorthy M |
+| 11:20 AM | 3 | M12 | Men's Doubles R16 | Kiran Kumar H N / Chandan N Bhat vs Sathish kumar S / Bharathikannan |
+| 11:20 AM | 4 | M13 | Men's Doubles R16 | Shaikh Sufyan / Hariprasad vs Dharunraj R / Akhil J |
 | 11:20 AM | 5 | M16 | Women's Singles R16 | Arya Raj vs Manju Nair |
 | 11:40 AM | 1 | M10 | Women's Singles R1 | Aarthy Reddy Sontam vs Sangeeta Hegde |
 | 11:40 AM | 2 | M11 | Mixed Doubles R1 | Dharunraj R / Aarthy Reddy Sontam vs Pooja B / Varun Pattnaik |
-| 11:40 AM | 3 | M14 | Men's Doubles R16 | Karthik / Arun vs Sathish kumar S / Bharathikannan |
+| 11:40 AM | 3 | M14 | Men's Doubles R16 | Manas Manna / Chirag A vs Amit Kumar / Moorthy M |
 | 11:40 AM | 4 | M17 | Women's Singles R16 | Asmita Gharat vs Bhavya Rajeev Joshi |
 | 11:40 AM | 5 | M19 | Women's Singles R16 | Debadrita Dey vs Rashi Mathur |
 | 11:40 AM | 6 | M20 | Women's Singles R16 | Geethika vs Adapala Lohitha |
@@ -68,13 +68,13 @@
 | 2:00 PM | 3 | M38 | Mixed Doubles R16 | Shreetama / Akhil J vs Manas Manna / Debadrita Dey |
 | 2:00 PM | 4 | M41 | Women's Doubles Group A | Debadrita Dey / Bhavya Joshi vs Vanathi Ponnasami / Geethika Bondalakunta |
 | 2:00 PM | 5 | M46 | Men's Doubles QF | Patan Amrulla Khan / Sandeep Ambekar vs Sushant Kumar / Ravindra Rao |
-| 2:00 PM | 6 | M48 | Men's Doubles QF | Pranav Kandukuru / Hariram K vs Riju KK / Shriram |
-| 2:20 PM | 1 | M39 | Men's Doubles R16 | Sumit Gaurav / Rishabh Gupta vs Kiran Kumar H N / Chandan N Bhat |
+| 2:00 PM | 6 | M48 | Men's Doubles QF | Riju KK / Shriram vs Pranav Kandukuru / Hariram K |
+| 2:20 PM | 1 | M39 | Men's Doubles R16 | Sumit Gaurav / Rishabh Gupta vs Karthik / Arun |
 | 2:20 PM | 2 | M40 | Mixed Doubles R16 | Rishabh Gupta / Prathyusha Chaganti vs Farheen Shaik / Arun |
 | 2:20 PM | 3 | M42 | Women's Doubles Group B | Farheen Shaik / Anupama Menon vs Sangeeta Hegde / Asmita Garat |
 | 2:20 PM | 4 | M43 | Women's Doubles Group B | Farheen Shaik / Anupama Menon vs Shreetama / Amisha Goel |
-| 2:20 PM | 5 | M45 | Men's Doubles QF | Winner M14 vs Winner M12 |
-| 2:20 PM | 6 | M47 | Men's Doubles QF | Winner M13 vs Winner M39 |
+| 2:20 PM | 5 | M45 | Men's Doubles QF | Winner M12 vs Winner M13 |
+| 2:20 PM | 6 | M47 | Men's Doubles QF | Winner M14 vs Winner M39 |
 | 2:40 PM | 1 | M44 | Women's Doubles Group B | Sangeeta Hegde / Asmita Garat vs Shreetama / Amisha Goel |
 | 2:40 PM | 2 | M49 | Men's Singles QF | Winner M24 vs Winner M25 |
 | 2:40 PM | 3 | M50 | Men's Singles QF | Winner M26 vs Winner M27 |

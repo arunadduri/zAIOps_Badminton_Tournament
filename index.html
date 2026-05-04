@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fixtures.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
 </head>
 <body>
@@ -276,12 +277,31 @@
 
     <section class="section" id="fixturesSection">
         <div class="content-container">
-            <h1 class="section-title">Fixtures</h1>
-            <div class="coming-soon">
-                <div class="coming-soon-icon">🏆</div>
-                <h2>Coming Soon</h2>
-                <p>Tournament fixtures will be announced shortly</p>
-                <button class="home-button" onclick="showSection('landing')">Back to Home</button>
+            <div class="page-header">
+                <h1 class="section-title">Tournament Fixtures & Schedule</h1>
+                <p class="section-subtitle">📅 8th May 2026 • 77 Participants • 74 Matches • ⏰ 11 AM - 4:40 PM</p>
+            </div>
+            
+            <!-- Enhanced Search Bar -->
+            <div class="search-filter-bar">
+                <div class="search-box-enhanced">
+                    <span class="search-icon-enhanced">🔍</span>
+                    <input type="text" id="fixturesSearchInput" placeholder="Search matches by player name..." onkeyup="filterFixtures(this.value)">
+                </div>
+            </div>
+            
+            <div class="registration-tabs">
+                <button class="registration-tab active" onclick="switchFixturesTab('mensSingles')"><span>👨</span> Men's Singles</button>
+                <button class="registration-tab" onclick="switchFixturesTab('mensDoubles')"><span>👨👨</span> Men's Doubles</button>
+                <button class="registration-tab" onclick="switchFixturesTab('womensSingles')"><span>👩</span> Women's Singles</button>
+                <button class="registration-tab" onclick="switchFixturesTab('womensDoubles')"><span>👩👩</span> Women's Doubles</button>
+                <button class="registration-tab" onclick="switchFixturesTab('mixedDoubles')"><span>👨👩</span> Mixed Doubles</button>
+            </div>
+            <div class="registrations-container" id="fixturesContainer">
+                <div class="loading-spinner" id="fixturesLoading" style="display: block;">
+                    <div class="spinner"></div>
+                    <p>Loading fixtures...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -376,12 +396,26 @@
                     </div>
                     <div class="rule-card-body">
                         <div class="rule-highlight">
-                            <span class="highlight-badge">Best of 3</span>
+                            <span class="highlight-badge">Flexible Format</span>
                             <span class="highlight-text">Rally Scoring</span>
                         </div>
+                        <div class="format-options" style="background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(255,193,7,0.1)); padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #ff6b6b;">
+                            <h4 style="margin: 0 0 10px 0; color: #ff6b6b; font-size: 16px;">⚙️ Format Options (Players' Choice)</h4>
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: rgba(255,255,255,0.5); padding: 10px; border-radius: 8px;">
+                                    <strong style="color: #2c3e50;">Option 1:</strong> <span style="color: #34495e;">21 points - 1 match (Single game)</span>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.5); padding: 10px; border-radius: 8px;">
+                                    <strong style="color: #2c3e50;">Option 2:</strong> <span style="color: #34495e;">11 points - Best of 3 sets</span>
+                                </div>
+                            </div>
+                            <p style="margin: 10px 0 0 0; font-size: 13px; color: #7f8c8d; font-style: italic;">
+                                <strong>⚠️ Default:</strong> If both players cannot agree on a format, the match will be played in <strong>21 points format (1 match)</strong>
+                            </p>
+                        </div>
                         <ul class="rule-list">
-                            <li><span class="list-icon">→</span> Each game to 21 points</li>
                             <li><span class="list-icon">→</span> Point on every rally</li>
+                            <li><span class="list-icon">→</span> Players must agree on format before match starts</li>
                         </ul>
                         <div class="key-rules">
                             <div class="key-rule-item">
@@ -390,11 +424,11 @@
                             </div>
                             <div class="key-rule-item">
                                 <span class="key-icon">⚡</span>
-                                <strong>At 20-20: Play continues until 2-point lead</strong>
+                                <strong>At 20-20 or 10-10: Play continues until 2-point lead</strong>
                             </div>
                             <div class="key-rule-item">
                                 <span class="key-icon">🏁</span>
-                                <strong>Maximum cap: 30 points (30-29 wins)</strong>
+                                <strong>Maximum cap: 30 points (21pt format) or 15 points (11pt format)</strong>
                             </div>
                         </div>
                     </div>
@@ -628,5 +662,6 @@
     <script src="js/navigation.js?v=2.2"></script>
     <script src="js/registration.js?v=2.2"></script>
     <script src="js/display.js?v=2.2"></script>
+    <script src="js/fixtures.js?v=2.2"></script>
 </body>
 </html>

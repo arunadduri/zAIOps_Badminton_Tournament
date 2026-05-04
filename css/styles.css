@@ -873,7 +873,7 @@ html {
 /* Form Styles */
 .form-container {
     max-width: 800px;
-    margin: 140px auto 80px;
+    margin: 180px auto 80px;
     background: var(--card-bg);
     border-radius: 20px;
     padding: 40px;

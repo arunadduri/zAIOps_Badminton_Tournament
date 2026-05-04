@@ -59,10 +59,10 @@
 ### ROUND OF 16 (4 matches)
 | Match | Team 1 | vs | Team 2 |
 |-------|--------|----|---------|
-| 1 | Karthik / Arun | vs | Sathish kumar S / Bharathikannan |
+| 1 | Kiran Kumar H N / Chandan N Bhat | vs | Sathish kumar S / Bharathikannan |
 | 2 | Shaikh Sufyan / Hariprasad | vs | Dharunraj R / Akhil J |
 | 3 | Manas Manna / Chirag A | vs | Amit Kumar / Moorthy M |
-| 4 | Sumit Gaurav / Rishabh Gupta | vs | Kiran Kumar H N / Chandan N Bhat |
+| 4 | Sumit Gaurav / Rishabh Gupta | vs | Karthik / Arun |
 
 ### QUARTER-FINALS (4 matches)
 | Match | Team 1 | vs | Team 2 |
@@ -70,17 +70,17 @@
 | 5 | Winner M1 | vs | Winner M2 |
 | 6 | Patan Amrulla Khan / Sandeep Ambekar | vs | Sushant Kumar / Ravindra Rao |
 | 7 | Winner M3 | vs | Winner M4 |
-| 8 | Pranav Kandukuru / Hariram K | vs | Riju KK / Shriram |
+| 8 | Riju KK / Shriram | vs | Pranav Kandukuru / Hariram K |
 
 ### SEMI-FINALS (2 matches)
 | Match | Team 1 | vs | Team 2 |
-|-------|--------|----|---------| 
+|-------|--------|----|---------|
 | 9 | Winner M5 | vs | Winner M6 |
 | 10 | Winner M7 | vs | Winner M8 |
 
 ### FINAL (1 match)
 | Match | Team 1 | vs | Team 2 |
-|-------|--------|----|---------| 
+|-------|--------|----|---------|
 | 11 | Winner M9 | vs | Winner M10 |
 
 ---
