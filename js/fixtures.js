@@ -179,48 +179,50 @@ const fixturesData = {
     },
     mixedDoubles: {
         title: "Mixed Doubles",
-        teams: 17,
-        matches: 16,
+        teams: 19,
+        matches: 18,
         rounds: [
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, team1: "Dharunraj R / Aarthy Reddy Sontam", team2: "Pooja B / Varun Pattnaik" }
+                    { id: 1, team1: "Pooja B / Varun Pattnaik", team2: "Arya Raj / Sandeep Ambekar" },
+                    { id: 2, team1: "Dharunraj R / Aarthy Reddy Sontam", team2: "Riju KK / Manju Nair" },
+                    { id: 3, team1: "Chirag A / Bhavya Joshi", team2: "Chandan n bhat / Sahithi budem" }
                 ]
             },
             {
                 name: "Round 2",
                 matches: [
-                    { id: 2, team1: "Winner M1", team2: "Asmita Gharat / Shriram Rao" },
-                    { id: 3, team1: "Chirag A / Bhavya Joshi", team2: "Chandan n bhat / Sahithi budem" },
-                    { id: 4, team1: "Amisha Goel / Pranav Kandukuru", team2: "Rashi Mathur / Bharathikannan kuppan" },
-                    { id: 5, team1: "Kiran Kumar H N / Vanathi Ponnasami", team2: "Amit Kumar / Geethika Bondalakunta" },
-                    { id: 6, team1: "Anupama Menon / Patan Amrulla Khan", team2: "Karthik Gunturi / Palak Thareja" },
-                    { id: 7, team1: "Rishabh Gupta / Prathyusha Chaganti", team2: "Farheen Shaik / Arun" },
-                    { id: 8, team1: "Sangeeta Hegde / Sushant Kumar", team2: "Adapala Lohitha / Sathish Kumar S" },
-                    { id: 9, team1: "Shreetama / Akhil J", team2: "Manas Manna / Debadrita Dey" }
+                    { id: 4, team1: "Winner M1", team2: "Asmita Gharat / Shriram Rao" },
+                    { id: 5, team1: "Winner M2", team2: "Winner M3" },
+                    { id: 6, team1: "Amisha Goel / Pranav Kandukuru", team2: "Rashi Mathur / Bharathikannan kuppan" },
+                    { id: 7, team1: "Kiran Kumar H N / Vanathi Ponnasami", team2: "Amit Kumar / Geethika Bondalakunta" },
+                    { id: 8, team1: "Anupama Menon / Patan Amrulla Khan", team2: "Karthik Gunturi / Palak Thareja" },
+                    { id: 9, team1: "Rishabh Gupta / Prathyusha Chaganti", team2: "Farheen Shaik / Arun" },
+                    { id: 10, team1: "Sangeeta Hegde / Sushant Kumar", team2: "Adapala Lohitha / Sathish Kumar S" },
+                    { id: 11, team1: "Shreetama / Akhil J", team2: "Manas Manna / Debadrita Dey" }
                 ]
             },
             {
                 name: "Quarterfinals",
                 matches: [
-                    { id: 10, team1: "Winner M2", team2: "Winner M3" },
-                    { id: 11, team1: "Winner M4", team2: "Winner M5" },
-                    { id: 12, team1: "Winner M6", team2: "Winner M7" },
-                    { id: 13, team1: "Winner M8", team2: "Winner M9" }
+                    { id: 12, team1: "Winner M4", team2: "Winner M5" },
+                    { id: 13, team1: "Winner M6", team2: "Winner M7" },
+                    { id: 14, team1: "Winner M8", team2: "Winner M9" },
+                    { id: 15, team1: "Winner M10", team2: "Winner M11" }
                 ]
             },
             {
                 name: "Semifinals",
                 matches: [
-                    { id: 14, team1: "Winner M10", team2: "Winner M11" },
-                    { id: 15, team1: "Winner M12", team2: "Winner M13" }
+                    { id: 16, team1: "Winner M12", team2: "Winner M13" },
+                    { id: 17, team1: "Winner M14", team2: "Winner M15" }
                 ]
             },
             {
                 name: "Final",
                 matches: [
-                    { id: 16, team1: "Winner M14", team2: "Winner M15" }
+                    { id: 18, team1: "Winner M16", team2: "Winner M17" }
                 ]
             }
         ]
