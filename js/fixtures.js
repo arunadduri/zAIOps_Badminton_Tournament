@@ -113,9 +113,9 @@ const fixturesData = {
                     { id: 4, player1: "Asmita Gharat", player2: "Bhavya Rajeev Joshi" },
                     { id: 5, player1: "Farheen Shaik", player2: "Sahithi Budem" },
                     { id: 6, player1: "Debadrita Dey", player2: "Rashi Mathur" },
-                    { id: 7, player1: "Geethika", player2: "Adapala Lohitha" },
-                    { id: 8, player1: "Amisha Goel", player2: "Vanathi Ponnasami" },
-                    { id: 9, player1: "Shreetama", player2: "Anupama Menon" }
+                    { id: 7, player1: "Adapala Lohitha", player2: "Amisha Goel" },
+                    { id: 8, player1: "Vanathi Ponnasami", player2: "Anupama Menon" },
+                    { id: 9, player1: "Geethika", player2: "Shreetama" }
                 ]
             },
             {
