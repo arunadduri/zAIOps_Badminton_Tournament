@@ -64,19 +64,19 @@ const fixturesData = {
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, team1: "Kiran Kumar H N / Chandan N Bhat", team2: "Sathish kumar S / Bharathikannan" },
-                    { id: 2, team1: "Shaikh Sufyan / Hariprasad", team2: "Dharunraj R / Akhil J" },
-                    { id: 3, team1: "Manas Manna / Chirag A", team2: "Amit Kumar / Moorthy M" },
-                    { id: 4, team1: "Sumit Gaurav / Rishabh Gupta", team2: "Karthik / Arun" }
+                    { id: 1, team1: "Sathish kumar S / Bharathikannan", team2: "Shaikh Sufyan / Hariprasad" },
+                    { id: 2, team1: "Dharunraj R / Akhil J", team2: "Amit Kumar / Moorthy M" },
+                    { id: 3, team1: "Vijay Kantanavar / Sushant Kumar", team2: "Patan Amrulla Khan / Sandeep Ambekar" },
+                    { id: 4, team1: "Sumit Gaurav / Rishabh Gupta", team2: "Pranav Kandukuru / Hariram K" }
                 ]
             },
             {
                 name: "Quarterfinals",
                 matches: [
-                    { id: 5, team1: "Winner M1", team2: "Winner M2" },
-                    { id: 6, team1: "Patan Amrulla Khan / Sandeep Ambekar", team2: "Sushant Kumar / Ravindra Rao" },
-                    { id: 7, team1: "Winner M3", team2: "Winner M4" },
-                    { id: 8, team1: "Riju KK / Shriram", team2: "Pranav Kandukuru / Hariram K" }
+                    { id: 5, team1: "Winner M1", team2: "Kiran Kumar H N / Chandan N Bhat" },
+                    { id: 6, team1: "Winner M2", team2: "Karthik / Arun" },
+                    { id: 7, team1: "Winner M3", team2: "Manas Manna / Chirag A" },
+                    { id: 8, team1: "Winner M4", team2: "Riju KK / Shriram" }
                 ]
             },
             {
