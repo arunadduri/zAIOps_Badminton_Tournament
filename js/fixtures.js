@@ -102,7 +102,7 @@ const fixturesData = {
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, player1: "Sangeeta Hegde", player2: "Prathyusha Chaganti" }
+                    { id: 1, player1: "Bhavya Rajeev Joshi", player2: "Prathyusha Chaganti" }
                 ]
             },
             {
@@ -114,7 +114,7 @@ const fixturesData = {
                     { id: 5, player1: "Shreetama", player2: "Rashi Mathur" },
                     { id: 6, player1: "Farheen Shaik", player2: "Vanathi Ponnasami" },
                     { id: 7, player1: "Amisha Goel", player2: "Adapala Lohitha" },
-                    { id: 8, player1: "Bhavya Rajeev Joshi", player2: "Manju Nair" },
+                    { id: 8, player1: "Sangeeta Hegde", player2: "Manju Nair" },
                     { id: 9, player1: "Geethika", player2: "Debadrita Dey" }
                 ]
             },
