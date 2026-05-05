@@ -9,27 +9,27 @@ const fixturesData = {
                 name: "Round 1",
                 matches: [
                     { id: 1, player1: "Vijay Kantanavar", player2: "Sathish kumar S" },
-                    { id: 2, player1: "Amit kumar", player2: "Ved" },
-                    { id: 3, player1: "Moorthy M", player2: "Riju KK" },
-                    { id: 4, player1: "Sushant Kumar", player2: "Patan Amrulla Khan" },
-                    { id: 5, player1: "Devendar Rao", player2: "Shaikh Sufyan" },
+                    { id: 2, player1: "Devendar Rao", player2: "Ved" },
+                    { id: 3, player1: "Karthik Gunturi", player2: "Rishabh Gupta" },
+                    { id: 4, player1: "Sandeep Ambekar", player2: "Patan Amrulla Khan" },
+                    { id: 5, player1: "Amit kumar", player2: "Shaikh Sufyan" },
                     { id: 6, player1: "bharathikannan", player2: "Pranav Kandukuru" },
                     { id: 7, player1: "Dharunraj R", player2: "Hariram K" },
                     { id: 8, player1: "Sumit Gaurav", player2: "VARUN PATTNAIK" },
-                    { id: 9, player1: "Sandeep Ambekar", player2: "Devendar Rao" }
+                    { id: 9, player1: "Moorthy M", player2: "Sushant Kumar" }
                 ]
             },
             {
                 name: "Round 2",
                 matches: [
-                    { id: 10, player1: "Kiran Kumar H N", player2: "Winner M1" },
+                    { id: 10, player1: "Winner M1", player2: "Kiran Kumar H N" },
                     { id: 11, player1: "Winner M2", player2: "Manas Manna" },
-                    { id: 12, player1: "Chandan n bhat", player2: "Winner M3" },
+                    { id: 12, player1: "Winner M3", player2: "Chandan n bhat" },
                     { id: 13, player1: "Winner M4", player2: "Chirag A" },
-                    { id: 14, player1: "Shriram Rao", player2: "Winner M9" },
-                    { id: 15, player1: "Winner M6", player2: "Rishabh Gupta" },
-                    { id: 16, player1: "Arun", player2: "Winner M7" },
-                    { id: 17, player1: "Winner M8", player2: "Karthik Gunturi" }
+                    { id: 14, player1: "Winner M5", player2: "Shriram Rao" },
+                    { id: 15, player1: "Winner M6", player2: "Riju KK" },
+                    { id: 16, player1: "Winner M7", player2: "Arun" },
+                    { id: 17, player1: "Winner M8", player2: "Winner M9" }
                 ]
             },
             {
