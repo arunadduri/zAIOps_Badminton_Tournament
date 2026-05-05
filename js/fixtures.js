@@ -64,7 +64,7 @@ const fixturesData = {
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, team1: "Sathish kumar S / Bharathikannan", team2: "Shaikh Sufyan / Hariprasad" },
+                    { id: 1, team1: "Sathish Kumar S / Bharathikannan Kuppan", team2: "Shaikh Sufyan / Hariprasad" },
                     { id: 2, team1: "Dharunraj R / Akhil J", team2: "Amit Kumar / Moorthy M" },
                     { id: 3, team1: "Vijay Kantanavar / Sushant Kumar", team2: "Patan Amrulla Khan / Sandeep Ambekar" },
                     { id: 4, team1: "Sumit Gaurav / Rishabh Gupta", team2: "Pranav Kandukuru / Hariram K" }
@@ -74,9 +74,9 @@ const fixturesData = {
                 name: "Quarterfinals",
                 matches: [
                     { id: 5, team1: "Winner M1", team2: "Kiran Kumar H N / Chandan N Bhat" },
-                    { id: 6, team1: "Winner M2", team2: "Karthik / Arun" },
+                    { id: 6, team1: "Winner M2", team2: "Karthik Gunturi / Arun Adduri" },
                     { id: 7, team1: "Winner M3", team2: "Manas Manna / Chirag A" },
-                    { id: 8, team1: "Winner M4", team2: "Riju KK / Shriram" }
+                    { id: 8, team1: "Winner M4", team2: "Riju KK / Shriram Rao" }
                 ]
             },
             {
@@ -167,13 +167,13 @@ const fixturesData = {
                 name: "Group B",
                 teams: [
                     "Farheen Shaik / Anupama Menon",
-                    "Sangeeta Hegde / Asmita Garat",
+                    "Sangeeta Hegde / Asmita Gharat",
                     "Shreetama / Amisha Goel"
                 ],
                 matches: [
-                    { id: 4, team1: "Farheen Shaik / Anupama Menon", team2: "Sangeeta Hegde / Asmita Garat" },
+                    { id: 4, team1: "Farheen Shaik / Anupama Menon", team2: "Sangeeta Hegde / Asmita Gharat" },
                     { id: 5, team1: "Farheen Shaik / Anupama Menon", team2: "Shreetama / Amisha Goel" },
-                    { id: 6, team1: "Sangeeta Hegde / Asmita Garat", team2: "Shreetama / Amisha Goel" }
+                    { id: 6, team1: "Sangeeta Hegde / Asmita Gharat", team2: "Shreetama / Amisha Goel" }
                 ]
             }
         ],
@@ -189,7 +189,7 @@ const fixturesData = {
                 matches: [
                     { id: 1, team1: "Pooja B / Varun Pattnaik", team2: "Arya Raj / Sandeep Ambekar" },
                     { id: 2, team1: "Dharunraj R / Aarthy Reddy Sontam", team2: "Riju KK / Manju Nair" },
-                    { id: 3, team1: "Chirag A / Bhavya Joshi", team2: "Chandan n bhat / Sahithi budem" }
+                    { id: 3, team1: "Chirag A / Bhavya Joshi", team2: "Chandan n bhat / Sahithi Budem" }
                 ]
             },
             {
@@ -197,10 +197,10 @@ const fixturesData = {
                 matches: [
                     { id: 4, team1: "Winner M1", team2: "Asmita Gharat / Shriram Rao" },
                     { id: 5, team1: "Winner M2", team2: "Winner M3" },
-                    { id: 6, team1: "Amisha Goel / Pranav Kandukuru", team2: "Rashi Mathur / Bharathikannan kuppan" },
+                    { id: 6, team1: "Amisha Goel / Pranav Kandukuru", team2: "Rashi Mathur / Bharathikannan Kuppan" },
                     { id: 7, team1: "Kiran Kumar H N / Vanathi Ponnasami", team2: "Amit Kumar / Geethika Bondalakunta" },
                     { id: 8, team1: "Anupama Menon / Patan Amrulla Khan", team2: "Karthik Gunturi / Palak Thareja" },
-                    { id: 9, team1: "Rishabh Gupta / Prathyusha Chaganti", team2: "Farheen Shaik / Arun" },
+                    { id: 9, team1: "Rishabh Gupta / Prathyusha Chaganti", team2: "Farheen Shaik / Arun Adduri" },
                     { id: 10, team1: "Sangeeta Hegde / Sushant Kumar", team2: "Adapala Lohitha / Sathish Kumar S" },
                     { id: 11, team1: "Shreetama / Akhil J", team2: "Manas Manna / Debadrita Dey" }
                 ]
