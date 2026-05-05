@@ -102,20 +102,20 @@ const fixturesData = {
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, player1: "Aarthy Reddy Sontam", player2: "Sangeeta Hegde" }
+                    { id: 1, player1: "Sangeeta Hegde", player2: "Prathyusha Chaganti" }
                 ]
             },
             {
                 name: "Round 2",
                 matches: [
-                    { id: 2, player1: "Winner M1", player2: "Prathyusha Chaganti" },
-                    { id: 3, player1: "Arya Raj", player2: "Manju Nair" },
-                    { id: 4, player1: "Asmita Gharat", player2: "Bhavya Rajeev Joshi" },
-                    { id: 5, player1: "Farheen Shaik", player2: "Sahithi Budem" },
-                    { id: 6, player1: "Debadrita Dey", player2: "Rashi Mathur" },
-                    { id: 7, player1: "Adapala Lohitha", player2: "Amisha Goel" },
-                    { id: 8, player1: "Vanathi Ponnasami", player2: "Anupama Menon" },
-                    { id: 9, player1: "Geethika", player2: "Shreetama" }
+                    { id: 2, player1: "Winner M1", player2: "Aarthy Reddy Sontam" },
+                    { id: 3, player1: "Arya Raj", player2: "Anupama Menon" },
+                    { id: 4, player1: "Asmita Gharat", player2: "Sahithi Budem" },
+                    { id: 5, player1: "Shreetama", player2: "Rashi Mathur" },
+                    { id: 6, player1: "Farheen Shaik", player2: "Vanathi Ponnasami" },
+                    { id: 7, player1: "Amisha Goel", player2: "Adapala Lohitha" },
+                    { id: 8, player1: "Bhavya Rajeev Joshi", player2: "Manju Nair" },
+                    { id: 9, player1: "Geethika", player2: "Debadrita Dey" }
                 ]
             },
             {
