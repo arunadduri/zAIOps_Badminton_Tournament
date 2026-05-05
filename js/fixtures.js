@@ -8,7 +8,7 @@ const fixturesData = {
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, player1: "Ravindra", player2: "Sathish kumar S" },
+                    { id: 1, player1: "Vijay Kantanavar", player2: "Sathish kumar S" },
                     { id: 2, player1: "Amit kumar", player2: "Ved" },
                     { id: 3, player1: "Moorthy M", player2: "Riju KK" },
                     { id: 4, player1: "Sushant Kumar", player2: "Patan Amrulla Khan" },
