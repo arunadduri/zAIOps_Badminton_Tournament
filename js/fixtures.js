@@ -96,48 +96,49 @@ const fixturesData = {
     },
     womensSingles: {
         title: "Women's Singles",
-        players: 17,
-        matches: 16,
+        players: 18,
+        matches: 17,
         rounds: [
             {
                 name: "Round 1",
                 matches: [
-                    { id: 1, player1: "Bhavya Rajeev Joshi", player2: "Prathyusha Chaganti" }
+                    { id: 1, player1: "Bhavya Rajeev Joshi", player2: "Prathyusha Chaganti" },
+                    { id: 2, player1: "Palak Thareja", player2: "Arya Raj" }
                 ]
             },
             {
                 name: "Round 2",
                 matches: [
-                    { id: 2, player1: "Winner M1", player2: "Aarthy Reddy Sontam" },
-                    { id: 3, player1: "Arya Raj", player2: "Anupama Menon" },
-                    { id: 4, player1: "Asmita Gharat", player2: "Sahithi Budem" },
-                    { id: 5, player1: "Shreetama", player2: "Rashi Mathur" },
-                    { id: 6, player1: "Farheen Shaik", player2: "Vanathi Ponnasami" },
-                    { id: 7, player1: "Amisha Goel", player2: "Adapala Lohitha" },
-                    { id: 8, player1: "Sangeeta Hegde", player2: "Manju Nair" },
-                    { id: 9, player1: "Geethika", player2: "Debadrita Dey" }
+                    { id: 3, player1: "Winner M1", player2: "Aarthy Reddy Sontam" },
+                    { id: 4, player1: "Winner M2", player2: "Anupama Menon" },
+                    { id: 5, player1: "Asmita Gharat", player2: "Sahithi Budem" },
+                    { id: 6, player1: "Shreetama", player2: "Rashi Mathur" },
+                    { id: 7, player1: "Farheen Shaik", player2: "Vanathi Ponnasami" },
+                    { id: 8, player1: "Amisha Goel", player2: "Adapala Lohitha" },
+                    { id: 9, player1: "Sangeeta Hegde", player2: "Manju Nair" },
+                    { id: 10, player1: "Geethika", player2: "Debadrita Dey" }
                 ]
             },
             {
                 name: "Quarterfinals",
                 matches: [
-                    { id: 10, player1: "Winner M2", player2: "Winner M3" },
-                    { id: 11, player1: "Winner M4", player2: "Winner M5" },
-                    { id: 12, player1: "Winner M6", player2: "Winner M7" },
-                    { id: 13, player1: "Winner M8", player2: "Winner M9" }
+                    { id: 11, player1: "Winner M3", player2: "Winner M4" },
+                    { id: 12, player1: "Winner M5", player2: "Winner M6" },
+                    { id: 13, player1: "Winner M7", player2: "Winner M8" },
+                    { id: 14, player1: "Winner M9", player2: "Winner M10" }
                 ]
             },
             {
                 name: "Semifinals",
                 matches: [
-                    { id: 14, player1: "Winner M10", player2: "Winner M11" },
-                    { id: 15, player1: "Winner M12", player2: "Winner M13" }
+                    { id: 15, player1: "Winner M11", player2: "Winner M12" },
+                    { id: 16, player1: "Winner M13", player2: "Winner M14" }
                 ]
             },
             {
                 name: "Final",
                 matches: [
-                    { id: 16, player1: "Winner M14", player2: "Winner M15" }
+                    { id: 17, player1: "Winner M15", player2: "Winner M16" }
                 ]
             }
         ]
