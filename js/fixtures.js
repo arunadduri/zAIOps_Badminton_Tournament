@@ -233,134 +233,104 @@ const fixturesData = {
     }
 };
 
-// Initialize match scheduling with conflict detection
+// Initialize curated UI match scheduling
 let globalSchedule = null;
 
 function initializeScheduling() {
     if (globalSchedule) return globalSchedule;
-    
-    const schedule = new Map(); // matchId -> {time, court}
-    const playerBusy = new Map(); // player -> [times]
-    
-    // Time slots (30 min intervals, skipping lunch 12:30-1:00 PM)
-    const times = [
-        '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM',
-        // LUNCH BREAK 1:00 PM
-        '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM',
-        '3:00 PM', '3:30 PM', '4:00 PM'
-    ];
-    
-    let currentTimeIdx = 0;
-    let currentCourt = 1;
-    let matchesScheduled = 0;
-    const totalCourts = 6;
-    
-    function getPlayers(match, isDoubles) {
-        const players = [];
-        if (isDoubles) {
-            ['team1', 'team2'].forEach(key => {
-                if (match[key] && !match[key].startsWith('Winner') && !match[key].includes('Group')) {
-                    players.push(...match[key].split('/').map(p => p.trim().toLowerCase()));
-                }
-            });
-        } else {
-            ['player1', 'player2'].forEach(key => {
-                if (match[key] && !match[key].startsWith('Winner')) {
-                    players.push(match[key].trim().toLowerCase());
-                }
-            });
-        }
-        return players;
-    }
-    
-    function canSchedule(players, time) {
-        return players.every(p => !playerBusy.has(p) || !playerBusy.get(p).includes(time));
-    }
-    
-    function scheduleMatch(match, isDoubles, categoryKey) {
-        const players = getPlayers(match, isDoubles);
-        const matchKey = `${categoryKey}_${match.id}`;
-        
-        // Ensure we don't go past available time slots
-        if (currentTimeIdx >= times.length) {
-            console.warn(`No more time slots available for match ${matchKey}`);
-            currentTimeIdx = times.length - 1;
-        }
-        
-        // Try to schedule at current time slot
-        if (canSchedule(players, times[currentTimeIdx])) {
-            schedule.set(matchKey, { time: times[currentTimeIdx], court: currentCourt });
-            players.forEach(p => {
-                if (!playerBusy.has(p)) playerBusy.set(p, []);
-                playerBusy.get(p).push(times[currentTimeIdx]);
-            });
-            matchesScheduled++;
-            
-            // Move to next court
-            currentCourt++;
-            if (currentCourt > totalCourts) {
-                currentCourt = 1;
-                currentTimeIdx++;
-            }
-        } else {
-            // Find next available time slot for these players
-            let scheduled = false;
-            for (let i = currentTimeIdx; i < times.length && !scheduled; i++) {
-                if (canSchedule(players, times[i])) {
-                    schedule.set(matchKey, { time: times[i], court: currentCourt });
-                    players.forEach(p => {
-                        if (!playerBusy.has(p)) playerBusy.set(p, []);
-                        playerBusy.get(p).push(times[i]);
-                    });
-                    matchesScheduled++;
-                    currentCourt++;
-                    if (currentCourt > totalCourts) {
-                        currentCourt = 1;
-                        currentTimeIdx = i + 1;
-                    }
-                    scheduled = true;
-                }
-            }
-            
-            if (!scheduled) {
-                // Fallback: force schedule at next available slot
-                if (currentTimeIdx < times.length) {
-                    schedule.set(matchKey, { time: times[currentTimeIdx], court: currentCourt });
-                    matchesScheduled++;
-                    currentCourt++;
-                    if (currentCourt > totalCourts) {
-                        currentCourt = 1;
-                        currentTimeIdx++;
-                    }
-                }
-            }
-        }
-    }
-    
-    // Schedule all matches
-    [
-        { key: 'mensSingles', data: fixturesData.mensSingles, isDoubles: false },
-        { key: 'womensSingles', data: fixturesData.womensSingles, isDoubles: false },
-        { key: 'mensDoubles', data: fixturesData.mensDoubles, isDoubles: true },
-        { key: 'womensDoubles', data: fixturesData.womensDoubles, isDoubles: true },
-        { key: 'mixedDoubles', data: fixturesData.mixedDoubles, isDoubles: true }
-    ].forEach(({ key, data, isDoubles }) => {
-        if (data.rounds) {
-            data.rounds.forEach(round => {
-                round.matches.forEach(match => scheduleMatch(match, isDoubles, key));
-            });
-        }
-        if (data.groups) {
-            data.groups.forEach(group => {
-                group.matches.forEach(match => scheduleMatch(match, isDoubles, key));
-            });
-            if (data.final) scheduleMatch(data.final, isDoubles, key);
-        }
+
+    const schedule = new Map();
+    const curatedSchedule = {
+        mensSingles_1: { time: '11:00 AM', court: 6 },
+        mensSingles_2: { time: '11:00 AM', court: 4 },
+        mensSingles_3: { time: '11:20 AM', court: 6 },
+        mensSingles_4: { time: '11:40 AM', court: 1 },
+        mensSingles_5: { time: '12:00 PM', court: 6 },
+        mensSingles_6: { time: '11:40 AM', court: 4 },
+        mensSingles_7: { time: '11:40 AM', court: 6 },
+        mensSingles_8: { time: '11:40 AM', court: 5 },
+        mensSingles_9: { time: '11:20 AM', court: 4 },
+        mensSingles_10: { time: '12:20 PM', court: 4 },
+        mensSingles_11: { time: '12:20 PM', court: 5 },
+        mensSingles_12: { time: '12:20 PM', court: 6 },
+        mensSingles_13: { time: '1:00 PM', court: 6 },
+        mensSingles_14: { time: '1:20 PM', court: 6 },
+        mensSingles_15: { time: '1:40 PM', court: 3 },
+        mensSingles_16: { time: '1:40 PM', court: 4 },
+        mensSingles_17: { time: '1:40 PM', court: 5 },
+        mensSingles_18: { time: '2:20 PM', court: 6 },
+        mensSingles_19: { time: '2:40 PM', court: 1 },
+        mensSingles_20: { time: '2:40 PM', court: 2 },
+        mensSingles_21: { time: '2:40 PM', court: 3 },
+        mensSingles_22: { time: '3:00 PM', court: 4 },
+        mensSingles_23: { time: '3:00 PM', court: 5 },
+        mensSingles_24: { time: '3:20 PM', court: 1 },
+
+        mensDoubles_1: { time: '11:00 AM', court: 2 },
+        mensDoubles_2: { time: '11:00 AM', court: 2 },
+        mensDoubles_3: { time: '11:00 AM', court: 2 },
+        mensDoubles_4: { time: '11:20 AM', court: 2 },
+        mensDoubles_5: { time: '1:20 PM', court: 3 },
+        mensDoubles_6: { time: '1:20 PM', court: 4 },
+        mensDoubles_7: { time: '1:20 PM', court: 5 },
+        mensDoubles_8: { time: '1:40 PM', court: 2 },
+        mensDoubles_9: { time: '2:40 PM', court: 4 },
+        mensDoubles_10: { time: '2:40 PM', court: 5 },
+        mensDoubles_11: { time: '3:20 PM', court: 2 },
+
+        womensSingles_1: { time: '11:40 AM', court: 3 },
+        womensSingles_2: { time: '11:20 AM', court: 3 },
+        womensSingles_3: { time: '11:00 AM', court: 5 },
+        womensSingles_4: { time: '12:20 PM', court: 1 },
+        womensSingles_5: { time: '12:20 PM', court: 2 },
+        womensSingles_6: { time: '12:00 PM', court: 1 },
+        womensSingles_7: { time: '12:20 PM', court: 3 },
+        womensSingles_8: { time: '12:00 PM', court: 2 },
+        womensSingles_9: { time: '12:00 PM', court: 3 },
+        womensSingles_10: { time: '12:00 PM', court: 4 },
+        womensSingles_11: { time: '12:00 PM', court: 5 },
+        womensSingles_12: { time: '2:00 PM', court: 3 },
+        womensSingles_13: { time: '2:00 PM', court: 4 },
+        womensSingles_14: { time: '2:00 PM', court: 5 },
+        womensSingles_15: { time: '2:00 PM', court: 6 },
+        womensSingles_16: { time: '2:40 PM', court: 6 },
+        womensSingles_17: { time: '3:00 PM', court: 1 },
+        womensSingles_18: { time: '3:20 PM', court: 4 },
+
+        womensDoubles_1: { time: '11:00 AM', court: 1 },
+        womensDoubles_2: { time: '11:20 AM', court: 1 },
+        womensDoubles_3: { time: '11:40 AM', court: 1 },
+        womensDoubles_4: { time: '1:40 PM', court: 6 },
+        womensDoubles_5: { time: '2:00 PM', court: 1 },
+        womensDoubles_6: { time: '2:00 PM', court: 2 },
+        womensDoubles_7: { time: '2:20 PM', court: 1 },
+        womensDoubles_8: { time: '3:20 PM', court: 3 },
+
+        mixedDoubles_1: { time: '11:00 AM', court: 3 },
+        mixedDoubles_2: { time: '11:20 AM', court: 5 },
+        mixedDoubles_3: { time: '11:40 AM', court: 2 },
+        mixedDoubles_4: { time: '1:20 PM', court: 1 },
+        mixedDoubles_5: { time: '1:20 PM', court: 2 },
+        mixedDoubles_6: { time: '1:00 PM', court: 1 },
+        mixedDoubles_7: { time: '1:40 PM', court: 1 },
+        mixedDoubles_8: { time: '1:00 PM', court: 2 },
+        mixedDoubles_9: { time: '1:00 PM', court: 3 },
+        mixedDoubles_10: { time: '1:00 PM', court: 4 },
+        mixedDoubles_11: { time: '1:00 PM', court: 5 },
+        mixedDoubles_12: { time: '2:20 PM', court: 2 },
+        mixedDoubles_13: { time: '2:20 PM', court: 3 },
+        mixedDoubles_14: { time: '2:20 PM', court: 4 },
+        mixedDoubles_15: { time: '2:20 PM', court: 5 },
+        mixedDoubles_16: { time: '3:00 PM', court: 2 },
+        mixedDoubles_17: { time: '3:00 PM', court: 3 },
+        mixedDoubles_18: { time: '3:20 PM', court: 5 }
+    };
+
+    Object.entries(curatedSchedule).forEach(([matchKey, matchSchedule]) => {
+        schedule.set(matchKey, matchSchedule);
     });
-    
-    console.log(`Scheduled ${matchesScheduled} matches across ${times.length} time slots`);
-    console.log(`Schedule size: ${schedule.size}`);
-    
+
+    console.log(`Loaded curated UI schedule with ${schedule.size} matches`);
     globalSchedule = schedule;
     return schedule;
 }
