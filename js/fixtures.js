@@ -13,7 +13,7 @@ const fixturesData = {
                     { id: 3, player1: "Karthik Gunturi", player2: "Rishabh Gupta" },
                     { id: 4, player1: "Sandeep Ambekar", player2: "Patan Amrulla Khan" },
                     { id: 5, player1: "Amit kumar", player2: "Shaikh Sufyan" },
-                    { id: 6, player1: "bharathikannan", player2: "Pranav Kandukuru" },
+                    { id: 6, player1: "bharathikannan", player2: "Pranesh Sridhar" },
                     { id: 7, player1: "Dharunraj R", player2: "Hariram K" },
                     { id: 8, player1: "Sumit Gaurav", player2: "VARUN PATTNAIK" },
                     { id: 9, player1: "Moorthy M", player2: "Sushant Kumar" }
@@ -67,7 +67,7 @@ const fixturesData = {
                     { id: 1, team1: "Sathish Kumar S / Bharathikannan Kuppan", team2: "Shaikh Sufyan / Hariprasad" },
                     { id: 2, team1: "Dharunraj R / Akhil J", team2: "Amit Kumar / Moorthy M" },
                     { id: 3, team1: "Vijay Kantanavar / Sushant Kumar", team2: "Patan Amrulla Khan / Sandeep Ambekar" },
-                    { id: 4, team1: "Sumit Gaurav / Rishabh Gupta", team2: "Pranav Kandukuru / Hariram K" }
+                    { id: 4, team1: "Sumit Gaurav / Rishabh Gupta", team2: "Pranesh Sridhar / Hariram K" }
                 ]
             },
             {
@@ -199,7 +199,7 @@ const fixturesData = {
                 matches: [
                     { id: 4, team1: "Winner M1", team2: "Asmita Gharat / Shriram Rao" },
                     { id: 5, team1: "Winner M2", team2: "Winner M3" },
-                    { id: 6, team1: "Amisha Goel / Pranav Kandukuru", team2: "Rashi Mathur / Bharathikannan Kuppan" },
+                    { id: 6, team1: "Amisha Goel / Pranesh Sridhar", team2: "Rashi Mathur / Bharathikannan Kuppan" },
                     { id: 7, team1: "Kiran Kumar H N / Vanathi Ponnasami", team2: "Amit Kumar / Geethika Bondalakunta" },
                     { id: 8, team1: "Anupama Menon / Patan Amrulla Khan", team2: "Karthik Gunturi / Palak Thareja" },
                     { id: 9, team1: "Rishabh Gupta / Prathyusha Chaganti", team2: "Farheen Shaik / Arun Adduri" },
