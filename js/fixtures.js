@@ -146,9 +146,9 @@ const fixturesData = {
     },
     womensDoubles: {
         title: "Women's Doubles",
-        teams: 6,
-        matches: 7,
-        format: "2 Groups → Round Robin → Final",
+        teams: 7,
+        matches: 8,
+        format: "Group A Round Robin + Group B Limited Pool → Final",
         groups: [
             {
                 name: "Group A",
@@ -168,16 +168,18 @@ const fixturesData = {
                 teams: [
                     "Farheen Shaik / Anupama Menon",
                     "Sangeeta Hegde / Asmita Gharat",
-                    "Shreetama / Amisha Goel"
+                    "Shreetama / Rashi Mathur",
+                    "Palak Thareja / Pooja B"
                 ],
                 matches: [
-                    { id: 4, team1: "Farheen Shaik / Anupama Menon", team2: "Sangeeta Hegde / Asmita Gharat" },
-                    { id: 5, team1: "Farheen Shaik / Anupama Menon", team2: "Shreetama / Amisha Goel" },
-                    { id: 6, team1: "Sangeeta Hegde / Asmita Gharat", team2: "Shreetama / Amisha Goel" }
+                    { id: 4, team1: "Farheen Shaik / Anupama Menon", team2: "Shreetama / Rashi Mathur" },
+                    { id: 5, team1: "Sangeeta Hegde / Asmita Gharat", team2: "Palak Thareja / Pooja B" },
+                    { id: 6, team1: "Farheen Shaik / Anupama Menon", team2: "Sangeeta Hegde / Asmita Gharat" },
+                    { id: 7, team1: "Shreetama / Rashi Mathur", team2: "Palak Thareja / Pooja B" }
                 ]
             }
         ],
-        final: { id: 7, team1: "Group A Winner", team2: "Group B Winner" }
+        final: { id: 8, team1: "Group A Winner", team2: "Group B Winner" }
     },
     mixedDoubles: {
         title: "Mixed Doubles",
