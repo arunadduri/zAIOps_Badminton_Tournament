@@ -540,6 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (firstTab) {
         firstTab.classList.add('active');
     }
+});
 
 // Statistics tab switching
 function switchStatsTab(tab) {
@@ -561,7 +562,6 @@ function switchStatsTab(tab) {
         targetCategory.classList.add('active');
     }
 }
-});
 
 // Helper function to get initials
 function getInitials(name) {
