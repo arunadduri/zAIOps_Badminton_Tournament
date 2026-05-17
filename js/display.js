@@ -353,6 +353,169 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Load 2026 tournament gallery images
+let gallery2026Images = [];
+
+async function load2026GalleryImages() {
+    const galleryGrid = document.querySelector('#2026Gallery .gallery-grid');
+    
+    if (!galleryGrid) return;
+    
+    galleryGrid.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--text-gray);"><div class="spinner"></div><p>Loading 2026 tournament photos...</p></div>';
+    
+    try {
+        // Try to load from Photos-2026 folder using images.json
+        const response = await fetch('Photos-2026/images.json');
+        const imageFiles = await response.json();
+        
+        if (imageFiles && imageFiles.length > 0) {
+            gallery2026Images = imageFiles.map(fileName => `Photos-2026/${fileName}`);
+            display2026GalleryImages(imageFiles.map(name => ({ name })), gallery2026Images);
+            console.log('✅ Loaded 2026 tournament images');
+            return;
+        }
+    } catch (error) {
+        console.log('No images.json found, trying to list files from Photos-2026 folder...');
+        
+        // Fallback: Try to load common image files
+        const commonImages = [
+            'tournament_photo_1.jpg',
+            'tournament_photo_2.jpg',
+            'tournament_photo_3.jpg',
+            'winners.jpg',
+            'ceremony.jpg'
+        ];
+        
+        // Test which images exist
+        const existingImages = [];
+        for (const img of commonImages) {
+            try {
+                const testResponse = await fetch(`Photos-2026/${img}`, { method: 'HEAD' });
+                if (testResponse.ok) {
+                    existingImages.push(img);
+                }
+            } catch (e) {
+                // Image doesn't exist, skip
+            }
+        }
+        
+        if (existingImages.length > 0) {
+            gallery2026Images = existingImages.map(fileName => `Photos-2026/${fileName}`);
+            display2026GalleryImages(existingImages.map(name => ({ name })), gallery2026Images);
+            return;
+        }
+        
+        // Show message to add photos
+        galleryGrid.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px; color: var(--text-gray);">
+                <div style="font-size: 4em; margin-bottom: 20px;">📸</div>
+                <h2 style="color: white; margin-bottom: 15px;">Add Your Tournament Photos!</h2>
+                <p style="margin-bottom: 10px;">Upload your zAIOps 2026 tournament photos to the <strong>Photos-2026</strong> folder</p>
+                <p style="font-size: 14px; opacity: 0.8;">Supported formats: JPG, PNG, JPEG</p>
+                <p style="font-size: 14px; opacity: 0.8; margin-top: 15px;">Photos will automatically appear here once added</p>
+            </div>
+        `;
+    }
+}
+
+function display2026GalleryImages(imageFiles, imageUrls) {
+    const galleryGrid = document.querySelector('#2026Gallery .gallery-grid');
+    
+    if (!galleryGrid) return;
+    
+    galleryGrid.innerHTML = '';
+    
+    if (imageFiles.length === 0) {
+        galleryGrid.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--text-gray);">No images found</div>';
+        return;
+    }
+    
+    imageFiles.forEach((file, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.setAttribute('onclick', `open2026Lightbox(${index})`);
+
+        const imageElement = document.createElement('img');
+        imageElement.src = imageUrls ? imageUrls[index] : `Photos-2026/${file.name || file}`;
+        imageElement.alt = `zAIOps 2026 Tournament Photo ${index + 1}`;
+        imageElement.loading = 'lazy';
+        imageElement.dataset.index = String(index);
+        imageElement.style.cursor = 'pointer';
+
+        imageElement.onerror = function() {
+            console.error('Failed to load 2026 image:', this.src);
+            this.parentElement.style.display = 'none';
+        };
+
+        imageElement.addEventListener('click', () => open2026Lightbox(index));
+
+        galleryItem.addEventListener('mousemove', (e) => {
+            const rect = galleryItem.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const rotateX = (y / rect.height - 0.5) * 10;
+            const rotateY = (x / rect.width - 0.5) * -10;
+
+            galleryItem.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px) scale(1.03)`;
+        });
+
+        galleryItem.addEventListener('mouseleave', () => {
+            galleryItem.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+        });
+
+        galleryItem.appendChild(imageElement);
+        galleryGrid.appendChild(galleryItem);
+    });
+}
+
+function open2026Lightbox(index) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    if (!lightbox || !lightboxImg || gallery2026Images.length === 0) return;
+
+    currentLightboxIndex = Math.max(0, Math.min(index, gallery2026Images.length - 1));
+    resetLightboxTransform();
+    lightboxImg.src = gallery2026Images[currentLightboxIndex];
+    updateLightboxCounter();
+    lightbox.style.display = 'flex';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Update navigation to use 2026 images
+    galleryImages = gallery2026Images;
+}
+
+// Gallery tab switching
+function switchGalleryTab(tab) {
+    // Update tab buttons
+    document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    // Update content visibility
+    document.querySelectorAll('.gallery-content').forEach(c => c.classList.remove('active'));
+    
+    if (tab === 'earlier') {
+        document.getElementById('earlierGallery').classList.add('active');
+        // Reset to earlier gallery images for lightbox
+        if (galleryImages.length > 0 && !galleryImages[0].includes('Photos-2026')) {
+            // Already using earlier gallery images
+        }
+    } else if (tab === '2026') {
+        document.getElementById('2026Gallery').classList.add('active');
+        // Load 2026 images if not already loaded
+        if (gallery2026Images.length === 0) {
+            load2026GalleryImages();
+        }
+    }
+}
+
+// Load 2026 gallery when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Load 2026 gallery images
+    load2026GalleryImages();
+});
+
 
 // Registration tab switching
 let currentRegistrationTab = 'mensSingles';
