@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let gallery2026Images = [];
 
 async function load2026GalleryImages() {
-    const galleryGrid = document.querySelector('#2026Gallery .gallery-grid');
+    const galleryGrid = document.querySelector('#gallery2026 .gallery-grid');
     
     if (!galleryGrid) return;
     
@@ -419,7 +419,7 @@ async function load2026GalleryImages() {
 }
 
 function display2026GalleryImages(imageFiles, imageUrls) {
-    const galleryGrid = document.querySelector('#2026Gallery .gallery-grid');
+    const galleryGrid = document.querySelector('#gallery2026 .gallery-grid');
     
     if (!galleryGrid) return;
     
@@ -502,7 +502,7 @@ function switchGalleryTab(tab) {
             // Already using earlier gallery images
         }
     } else if (tab === '2026') {
-        document.getElementById('2026Gallery').classList.add('active');
+        document.getElementById('gallery2026').classList.add('active');
         // Load 2026 images if not already loaded
         if (gallery2026Images.length === 0) {
             load2026GalleryImages();
