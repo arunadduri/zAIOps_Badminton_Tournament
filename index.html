@@ -83,9 +83,9 @@
                 <div class="hero-content">
                     <h1 class="hero-title">Tournament Highlights</h1>
                     <p class="hero-subtitle">Relive the best moments! 🏸</p>
-                    <button class="hero-register-btn" onclick="showSection('fixtures')" style="background: linear-gradient(90deg, #4CAF50, #45a049);">
+                    <button class="hero-register-btn" onclick="showSection('stats')" style="background: linear-gradient(90deg, #4CAF50, #45a049);">
                         <span>View Match Results</span>
-                        <span class="btn-icon">📋</span>
+                        <span class="btn-icon">🏆</span>
                     </button>
                 </div>
             </div>
@@ -308,13 +308,82 @@
 
     <section class="section" id="statsSection">
         <div class="content-container">
-            <h1 class="section-title">Statistics</h1>
-            <div class="coming-soon">
-                <div class="coming-soon-icon">📈</div>
-                <h2>Coming Soon</h2>
-                <p>Player statistics will be available after the tournament begins</p>
-                <button class="home-button" onclick="showSection('landing')">Back to Home</button>
+            <div class="page-header">
+                <h1 class="section-title">Tournament Results 🏆</h1>
+                <p class="section-subtitle">Congratulations to all our champions and runners-up!</p>
             </div>
+            
+            <div class="registration-tabs">
+                <button class="registration-tab active" onclick="switchStatsTab('mensSingles')"><span>👨</span> Men's Singles</button>
+                <button class="registration-tab" onclick="switchStatsTab('mensDoubles')"><span>👨👨</span> Men's Doubles</button>
+                <button class="registration-tab" onclick="switchStatsTab('womensSingles')"><span>👩</span> Women's Singles</button>
+                <button class="registration-tab" onclick="switchStatsTab('womensDoubles')"><span>👩👩</span> Women's Doubles</button>
+                <button class="registration-tab" onclick="switchStatsTab('mixedDoubles')"><span>👨👩</span> Mixed Doubles</button>
+            </div>
+            
+            <div class="stats-container" id="statsContainer">
+                <!-- Men's Singles -->
+                <div class="stats-category active" id="stats-mensSingles">
+                    <div class="winner-card">
+                        <div class="winner-badge">🥇 Champion</div>
+                        <div class="winner-name">Chandan</div>
+                    </div>
+                    <div class="runner-card">
+                        <div class="runner-badge">🥈 Runner-up</div>
+                        <div class="runner-name">Shriram</div>
+                    </div>
+                </div>
+                
+                <!-- Men's Doubles -->
+                <div class="stats-category" id="stats-mensDoubles">
+                    <div class="winner-card">
+                        <div class="winner-badge">🥇 Champions</div>
+                        <div class="winner-name">Kiran & Chandan</div>
+                    </div>
+                    <div class="runner-card">
+                        <div class="runner-badge">🥈 Runners-up</div>
+                        <div class="runner-name">Shriram & Riju</div>
+                    </div>
+                </div>
+                
+                <!-- Women's Singles -->
+                <div class="stats-category" id="stats-womensSingles">
+                    <div class="winner-card">
+                        <div class="winner-badge">🥇 Champion</div>
+                        <div class="winner-name">Debadrita</div>
+                    </div>
+                    <div class="runner-card">
+                        <div class="runner-badge">🥈 Runner-up</div>
+                        <div class="runner-name">Bhavya</div>
+                    </div>
+                </div>
+                
+                <!-- Women's Doubles -->
+                <div class="stats-category" id="stats-womensDoubles">
+                    <div class="winner-card">
+                        <div class="winner-badge">🥇 Champions</div>
+                        <div class="winner-name">Bhavya & Debadrita</div>
+                    </div>
+                    <div class="runner-card">
+                        <div class="runner-badge">🥈 Runners-up</div>
+                        <div class="runner-name">Asmita & Sangeeta</div>
+                    </div>
+                </div>
+                
+                <!-- Mixed Doubles -->
+                <div class="stats-category" id="stats-mixedDoubles">
+                    <div class="winner-card">
+                        <div class="winner-badge">🥇 Champions</div>
+                        <div class="winner-name">Riju & Manju</div>
+                    </div>
+                    <div class="runner-card">
+                        <div class="runner-badge">🥈 Runners-up</div>
+                        <div class="runner-name">Arun & Farheen</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="home-button" onclick="showSection('landing')" style="display: block; margin: 40px auto 0;">Back to Home</button>
         </div>
     </section>
 

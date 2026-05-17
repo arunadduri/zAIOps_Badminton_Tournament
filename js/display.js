@@ -540,6 +540,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (firstTab) {
         firstTab.classList.add('active');
     }
+
+// Statistics tab switching
+function switchStatsTab(tab) {
+    // Update tab buttons
+    const statsSection = document.getElementById('statsSection');
+    if (!statsSection) return;
+    
+    const tabs = statsSection.querySelectorAll('.registration-tab');
+    tabs.forEach(t => t.classList.remove('active'));
+    
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+    
+    // Update content visibility
+    document.querySelectorAll('.stats-category').forEach(c => c.classList.remove('active'));
+    const targetCategory = document.getElementById(`stats-${tab}`);
+    if (targetCategory) {
+        targetCategory.classList.add('active');
+    }
+}
 });
 
 // Helper function to get initials
